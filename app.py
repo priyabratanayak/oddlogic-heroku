@@ -9,11 +9,8 @@ import os
 
 import copy
 import pandas as pd
-from pynput.mouse import Listener
-from pynput.keyboard import Key,Controller
 import keyboard  # using module keyboard
-from threading import Thread
-import time    
+import time
 import cv2
 import numpy as np
 import pytesseract
@@ -21,13 +18,8 @@ import pytesseract
 from PIL import Image  
 import math
 from flask import Flask, jsonify, request, render_template
-
-import json
 import shutil
 import os
-import tkinter as tk
-from tkinter import simpledialog
-import sys
 #--------On Local System
 #pytesseract.pytesseract.tesseract_cmd = 'C:/Program Files/Tesseract-OCR/tesseract.exe'
 
