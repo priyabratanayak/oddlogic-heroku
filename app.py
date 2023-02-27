@@ -11,7 +11,7 @@ import copy
 import pandas as pd
 import keyboard  # using module keyboard
 import time
-import cv2
+
 import numpy as np
 import pytesseract
 # adds image processing capabilities
@@ -232,6 +232,7 @@ def capture():
     # opening an image from the source path
     #img = Image.open(r'C:\Users\biswa\Downloads\screen.png')     
     for file in os.listdir(dirname):
+        import cv2
         name=file.split(".")
         name="".join(name[:-1])
         img=cv2.imread(dirname+'\\'+file,cv2.IMREAD_UNCHANGED) 
