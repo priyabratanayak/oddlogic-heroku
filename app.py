@@ -6,7 +6,7 @@ Created on Tue Jan 24 16:52:52 2023
 """
 
 import os
-import pyautogui
+
 import copy
 import pandas as pd
 from pynput.mouse import Listener
@@ -21,7 +21,7 @@ import pytesseract
 from PIL import Image  
 import math
 from flask import Flask, jsonify, request, render_template
-#import win32api
+
 import json
 import shutil
 import os
@@ -49,6 +49,7 @@ def hello_world():
 #def move(coordinates):  
 @app.route('/move/',methods = ['GET','POST'])
 def move():
+    import pyautogui
     adjustment_x=0#60
     adjustment_y=0#20
     coordinate_json=request.get_json()
@@ -69,8 +70,9 @@ def move():
     message = {'coordinates':coord}
     return jsonify(message)
 @app.route('/save/<screen>')
-def save(screen): 
-   
+def save(screen):
+    import win32api
+    import pyautogui
     win32api.MessageBox(0, 'Go to the Application', 'Alert',0x00001000)
     time.sleep(0.5)
     myScreenshot = pyautogui.screenshot()
@@ -136,6 +138,8 @@ def fetch():
     return jsonify(message)  
 @app.route('/capture')
 def capture():
+    import win32api
+    import pyautogui
     counter=0
     dim=None
     coordinates=[]

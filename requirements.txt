@@ -3,6 +3,8 @@ Flask==1.1.2
 python-dotenv
 opencv-python
 pytesseract
+mouseinfo
+pyautogui
 keyboard
 opencv-python==4.5.3.56
 opencv-python-headless==4.5.3.56
