@@ -6,7 +6,7 @@ Created on Tue Jan 24 16:52:52 2023
 """
 
 import os
-
+from tkinter import messagebox
 import copy
 import pandas as pd
 import keyboard  # using module keyboard
@@ -35,6 +35,7 @@ app=Flask(__name__)
                
 @app.route('/')
 def hello_world():
+    messagebox.showinfo("Message Title","Message Content")
     return 'Hello !!!'
 
 #@app.route('/move/<coordinates>')
